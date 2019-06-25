@@ -16,7 +16,7 @@ const Bar = props => (
 )
 
 const setWeight = (w)  => {
-    w > 100 ? w = '100%' : w = w + '%'
+    w = w > 100 ? '100%' : w + '%'
     return w
 }
 
