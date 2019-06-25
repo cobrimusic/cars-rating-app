@@ -26,6 +26,17 @@
     }
 }
 
+.tags {
+    .tag {
+        width: 100%;
+    }
+}
+
+a.back-link {
+    font-size: 14px;
+    font-weight: 400;
+}
+
 .bar-green {
     background-color: #23d160!important;
 }
@@ -59,6 +70,10 @@
             margin: auto;
             padding: 20px 0;
         }
+    }
+
+    .info-padding{
+        padding: 0.75rem!important;
     }
 }
 

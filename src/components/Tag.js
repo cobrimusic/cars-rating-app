@@ -5,16 +5,28 @@ export default class Tag extends React.Component {
         super(props)
 
         this.state = {
-            move: this.props.move
+            move: this.props.move,
+            color: 'info',
+            colors: [
+                'info',
+                'warning',
+                'success',
+                'danger',
+                'black',
+                'link'
+            ]
         }
 
         this.capitalizeFirst = this.capitalizeFirst.bind(this)
         this.replaceChar = this.replaceChar.bind(this)
+        this.assingColor = this.assingColor.bind(this)
     }
 
     componentDidMount() {
         const move = this.capitalizeFirst(this.replaceChar(this.state.move))
+        const color = this.assingColor()
         this.setState({move: move})
+        this.setState({color: color})
     }
 
     capitalizeFirst(v) {
@@ -25,9 +37,14 @@ export default class Tag extends React.Component {
         return v.replace(/-/g, ' ')
     }
 
+    assingColor() {
+        const colors = this.state.colors
+        return colors[Math.floor(Math.random() * colors.length)]
+    }
+
     render() {
         return(
-           <span className="tag is-link is-normal">{ this.state.move }</span> 
+           <span className={'tag is-' + this.state.color + ' is-normal' }>{ this.state.move }</span> 
         )
     }
 }

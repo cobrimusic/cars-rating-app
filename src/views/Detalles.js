@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 //Components 
 import Hero from '../components/Hero'
@@ -42,6 +43,8 @@ export default class Detalles extends Component {
                 <div className="columns is-multiline" style={{ margin:'auto' }}>
                    { this.state.info }
                 </div>
+
+                <Link to='/'><a className="back-link info-padding" href="javascript:void(0)">Regresar...</a></Link>
             </div>
         )
     }

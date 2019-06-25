@@ -3,7 +3,7 @@ import Bar from './Bar'
 import Tag from './Tag'
 
 const Info = props => (
-    <div className="column is-12" style={{ padding:'0'}}>
+    <div className="column is-12 info-padding" style={{ padding:'0'}}>
         <div className="card">
             <div className="card-content">
                 <div className="media">
@@ -42,15 +42,16 @@ const Info = props => (
 
                             <div className="column is-6">
                                 <span>
-                                    <b>Some Moves: </b>
+                                    <b>Moves: </b>
                                     <div className="columns is-multiline is-mobile">
                                         { props.data.moves.slice(0, 4).map((data) => (
                                             <div key={ data.move.name } className="column is-3 is-4-mobile">
-                                                <Tag move={ data.move.name }/>
+                                                <div className="tags">
+                                                    <Tag move={ data.move.name }/>
+                                                </div>
                                             </div>
                                         ))}
                                     </div>
-                                    
                                 </span>
                             </div>
                         </div>
