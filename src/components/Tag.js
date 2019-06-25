@@ -1,4 +1,5 @@
 import React from 'react'
+import DataColors from '../data/Colors'
 
 export default class Tag extends React.Component {
     constructor(props) {
@@ -7,14 +8,7 @@ export default class Tag extends React.Component {
         this.state = {
             move: this.props.move,
             color: 'info',
-            colors: [
-                'info',
-                'warning',
-                'success',
-                'danger',
-                'black',
-                'link'
-            ]
+            colors: DataColors
         }
 
         this.capitalizeFirst = this.capitalizeFirst.bind(this)
