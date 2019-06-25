@@ -45,6 +45,13 @@ a.back-link {
     background-color: #209cee!important;
 }
 
+@media(max-width:768px) and (orientation: landscape) {
+    .media-content {
+        span.bar-container {
+            width: calc((100% - 130px))!important;
+        }
+    }
+}
 @media(max-width:768px) {
     .hero {
         margin: 0!important;
@@ -69,6 +76,10 @@ a.back-link {
             max-width: 100%;
             margin: auto;
             padding: 20px 0;
+
+            span.bar-container {
+                width: 150px;
+            }
         }
     }
 
