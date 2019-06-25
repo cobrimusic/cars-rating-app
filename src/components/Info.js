@@ -9,7 +9,7 @@ const Info = props => (
                 <div className="media">
                     <div className="media-left">
                         <figure className="image is-70x70">
-                            <img src={ props.data.sprites.back_default } alt={ props.data.name } />
+                            <img src={ props.data.sprites.front_default } alt={ props.data.name } />
                         </figure>
                     </div>
                     <div className="media-content" style={{ alignSelf:'center' }}>
