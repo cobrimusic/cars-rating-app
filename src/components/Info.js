@@ -42,7 +42,7 @@ const Info = props => (
 
                             <div className="column is-6">
                                 <span>
-                                    <b>Moves: </b>
+                                    <b>Some Moves: </b>
                                     <div className="columns is-multiline is-mobile">
                                         { props.data.moves.slice(0, 4).map((data) => (
                                             <div key={ data.move.name } className="column is-3-desktop is-6-mobile">
