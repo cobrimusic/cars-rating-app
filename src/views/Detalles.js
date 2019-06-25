@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 //Components 
-import Info from '../components/Info'
 import Hero from '../components/Hero'
+import Info from '../components/Info'
 
 export default class Detalles extends Component {
     constructor(props) {
@@ -14,7 +14,7 @@ export default class Detalles extends Component {
             name_to_url_parse: match.name
         }
 
-        this.activeTab = this.activeTab.bind(this)
+        this.capitalizeFirst = this.capitalizeFirst.bind(this)
     }
 
     componentDidMount() {
@@ -23,22 +23,22 @@ export default class Detalles extends Component {
         fetch(url)
         .then(results => {
             return results.json()
-        }).then(data => {
+        })
+        .then(data => {
             console.log(data)
-            let info = <Info data={ data } event={ this.activeTab } />
-
+            let info = <Info name={ this.capitalizeFirst(data.name) } data={ data } event={ this.activeTab } />
             this.setState({info: info})
         })
     }
 
-    activeTab(e) {
-        e.preventDefault()
+    capitalizeFirst(v) {
+        return v.charAt(0).toUpperCase() + v.slice(1)
     }
 
     render() {
         return(
             <div className="container">
-                <Hero title={ this.state.name_to_url_parse }/>
+                <Hero title={  this.capitalizeFirst(this.state.name_to_url_parse) }/>
                 <div className="columns is-multiline" style={{ margin:'auto' }}>
                    { this.state.info }
                 </div>

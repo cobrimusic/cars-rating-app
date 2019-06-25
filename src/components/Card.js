@@ -11,7 +11,7 @@ const Card = props => (
                 </div>
 
                 <div className="content">
-                    Ver más acerca de <a href={'detalles/' + props.name}>@{ props.name }</a>.
+                    Ver más acerca de <a href={'detalles/' + props.param}>@{ props.name }</a>.
                     <br />
                 </div>
             </div>
