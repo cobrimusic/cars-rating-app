@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Card = props => (
-    <div className="column is-6">
+    <div className="column is-4">
         <div className="card">
             <div className="card-content">
                 <div className="media">

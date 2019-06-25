@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './index.scss';
 import Lista from './views/Lista'
 import Detalles from './views/Detalles'
-import App from './App';
 
 //ServiceWorker
 import * as serviceWorker from './serviceWorker';
