@@ -7,7 +7,7 @@ In the project directory, you can run:
 ### `node server.js`
 
 Runs the building react app and serve statics files.<br>
-First run `npm run build` for create build folder
+First run `npm run build` for create build folder.
 Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 ### `npm start`
