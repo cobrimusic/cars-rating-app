@@ -45,7 +45,7 @@ const Info = props => (
                                     <b>Moves: </b>
                                     <div className="columns is-multiline is-mobile">
                                         { props.data.moves.slice(0, 4).map((data) => (
-                                            <div key={ data.move.name } className="column is-3 is-4-mobile">
+                                            <div key={ data.move.name } className="column is-3-desktop is-6-mobile">
                                                 <div className="tags">
                                                     <Tag move={ data.move.name }/>
                                                 </div>
