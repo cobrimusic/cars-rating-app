@@ -2,7 +2,7 @@ import React from 'react'
 
 const Bar = props => (
     <div style={{ margin:'auto', padding:'0' }}>
-        <span>
+        <span className="title-bar">
             <b>{ props.title }: </b>
         </span>
         

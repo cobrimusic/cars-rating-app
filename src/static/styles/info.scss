@@ -48,7 +48,7 @@ a.back-link {
 @media(max-width:768px) and (orientation: landscape) {
     .media-content {
         span.bar-container {
-            width: calc((100% - 145px))!important;
+            width: calc((100% - 170px))!important;
         }
     }
 }
@@ -77,8 +77,13 @@ a.back-link {
             margin: auto;
             padding: 20px 0;
 
+            span.title-bar {
+                display: inline-block;
+                width: 100px;
+            }
+
             span.bar-container {
-                width: 150px;
+                width: calc((100% - 170px))!important;
             }
         }
     }
