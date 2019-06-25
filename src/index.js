@@ -7,14 +7,18 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './index.scss';
 import Lista from './views/Lista'
 import Detalles from './views/Detalles'
+import NotFound from './views/NotFound'
 
 //ServiceWorker
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Router>
-        <Route exact path="/" component={Lista}/>
-        <Route exact path="/lista" component={Lista}/>
-        <Route exact path="/detalles/:name" component={Detalles}/>
+        <Switch>
+            <Route exact path="/" component={Lista}/>
+            <Route exact path="/lista" component={Lista}/>
+            <Route exact path="/pokemon/:name" component={Detalles}/>
+            <Route component={ NotFound } />
+        </Switch>
     </Router>, 
     document.getElementById('root'));
 

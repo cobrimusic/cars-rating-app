@@ -42,7 +42,7 @@ export default class Lista extends Component {
     render() {
         return(
             <div className="container">
-                <Hero title="Poke API" />
+                <Hero title="Poke API"/>
                 <div className="columns is-multiline" style={{ margin:'auto' }}>
                     { this.state.cards }
                 </div>

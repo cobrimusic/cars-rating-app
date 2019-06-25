@@ -39,12 +39,12 @@ export default class Detalles extends Component {
     render() {
         return(
             <div className="container">
-                <Hero title={  this.capitalizeFirst(this.state.name_to_url_parse) }/>
+                <Hero title={  this.capitalizeFirst(this.state.name_to_url_parse) } />
                 <div className="columns is-multiline" style={{ margin:'auto' }}>
                    { this.state.info }
                 </div>
 
-                <Link to='/'><a className="back-link info-padding" href="javascript:void(0)">Regresar...</a></Link>
+                <Link to='/lista'><a className="back-link info-padding" href="javascript:void(0)">Regresar...</a></Link>
             </div>
         )
     }
