@@ -1,3 +1,7 @@
 ## See demo on Heroku
 
-Open [https://hello-pokemon-app.herokuapp.com/](https://hello-pokemon-app.herokuapp.com/) to view in the browser. Execute `npm start` for run app in development mode. Open [http://localhost:3000](http://localhost:3000) or if you prefer `npm run build` for create build folder and static files. After that `node server.js` for view in [http://localhost:3001](http://localhost:3001).
+Open [https://hello-pokemon-app.herokuapp.com/](https://hello-pokemon-app.herokuapp.com/) to view live demo. 
+
+## See on local
+
+Execute `npm start` for run app in development mode. Open [http://localhost:3000](http://localhost:3000) or if you prefer `npm run build` for create build folder and static files. After that `node server.js` for view in [http://localhost:3001](http://localhost:3001).
