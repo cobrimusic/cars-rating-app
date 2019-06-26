@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 //Components 
 import Hero from '../components/Hero'
-import Info from '../components/Info'
+import Info from '../layouts/Info'
 
 export default class Detalles extends Component {
     constructor(props) {
@@ -26,7 +26,6 @@ export default class Detalles extends Component {
             return results.json()
         })
         .then(data => {
-            console.log(data)
             let info = <Info name={ this.capitalizeFirst(data.name) } data={ data } event={ this.activeTab } />
             this.setState({info: info})
         })
@@ -40,7 +39,8 @@ export default class Detalles extends Component {
         return(
             <div className="container">
                 <Hero title={  this.capitalizeFirst(this.state.name_to_url_parse) } />
-                <div className="columns is-multiline" style={{ margin:'auto' }}>
+                
+                <div className="columns" style={{ margin:'auto' }}>
                    { this.state.info }
                 </div>
 

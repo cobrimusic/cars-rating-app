@@ -1,6 +1,6 @@
 import React from 'react'
-import Bar from './Bar'
-import Tag from './Tag'
+import Bar from '../components/Bar'
+import Tag from '../components/Tag'
 
 const Info = props => (
     <div className="column is-12 info-padding" style={{ padding:'0'}}>
