@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 //Components 
 import Card from '../components/Card'
 import Hero from '../components/Hero'
-import { stringLiteral } from '@babel/types';
 
 export default class Lista extends Component {
     constructor(props) {

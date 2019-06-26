@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Hero = props => (
+const Hero = props => state => (
     <section className="hero is-light" style={{ margin:'0 0 1.3rem 0'}}>
         <div className="hero-body">
             <div className="container">
