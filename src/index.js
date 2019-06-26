@@ -12,13 +12,13 @@ import NotFound from './views/NotFound'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Router>
-        <Switch>
-            <Route exact path="/" component={Lista}/>
-            <Route exact path="/lista" component={Lista}/>
-            <Route exact path="/pokemon/:name" component={Detalles}/>
-            <Route component={ NotFound } />
-        </Switch>
-    </Router>, 
-    document.getElementById('root'));
+    <Switch>
+        <Route exact path="/" component={Lista}/>
+        <Route exact path="/lista" component={Lista}/>
+        <Route exact path="/pokemon/:name" component={Detalles}/>
+        <Route component={ NotFound } />
+    </Switch>
+</Router>, 
+document.getElementById('root'));
 
 serviceWorker.unregister();
