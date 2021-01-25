@@ -1,10 +1,19 @@
-## See demo on Heroku
+<h1 align="center">Node cars app | Javascript</h1>
 
-Open [Hello Pockemon App](https://hello-pokemon-app.herokuapp.com/) to view live demo. 
+## 1.  Installing
 
-## See on local
+#### Install dependencies
 
-Execute `npm start` for run app in development mode. Open [http://localhost:3000](http://localhost:3000) or if you prefer `npm run build` for create build folder and static files. After that `node server.js` for view in [http://localhost:3001](http://localhost:3001).
+```bash
+$ npm i
+```
 
-Developed with [React](https://es.reactjs.org/) and [Bulma.io](https://bulma.io/). <br>
-Server with [Express](https://expressjs.com/es/).
+#### Environments
+
+Copy `.env.example` to `.env` and set environments
+
+##  2. Running
+
+```bash
+$ npm run start
+```
