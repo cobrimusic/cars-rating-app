@@ -11,22 +11,48 @@ export default class Detalles extends Component {
         const match = props.match.params
 
         this.state = {
+            data: null,
             info: null,
-            name_to_url_parse: match.name
+            name_to_url_parse: match.id
         }
 
         this.capitalizeFirst = this.capitalizeFirst.bind(this)
+        this.changeStatus = this.changeStatus.bind(this)
+    }
+
+    changeStatus(status) {
+        const url = 'http://localhost:4000/api/cars/' + this.state.name_to_url_parse
+
+        this.setState({
+            data: {
+                ...this.state.data,
+                main : status
+            }
+        }, () => {
+            fetch(url, {
+                method: 'PUT',
+                headers:{
+                    "Content-type": "application/json; charset=UTF-8"
+                },
+                body: JSON.stringify(this.state.data)
+            })
+            .then(results => results.json())
+            .then(data => {
+                window.location.reload();
+            })
+        })
     }
 
     componentDidMount() {
-        const url = 'https://pokeapi.co/api/v2/pokemon/' + this.state.name_to_url_parse
+        const url = 'http://localhost:4000/api/cars/' + this.state.name_to_url_parse
        
         fetch(url)
         .then(results => {
             return results.json()
         })
         .then(data => {
-            let info = <Info name={ this.capitalizeFirst(data.name) } data={ data } event={ this.activeTab } />
+            this.setState({data: data})
+            let info = <Info name={ this.capitalizeFirst(data.model) } data={ data } event={ this.activeTab } click={ this.changeStatus }/>
             this.setState({info: info})
         })
     }
@@ -38,7 +64,7 @@ export default class Detalles extends Component {
     render() {
         return(
             <div className="container">
-                <Hero title={  this.capitalizeFirst(this.state.name_to_url_parse) } />
+                <Hero title="Información detallada" />
                 
                 <div className="columns" style={{ margin:'auto' }}>
                    { this.state.info }

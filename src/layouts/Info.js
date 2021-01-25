@@ -1,5 +1,4 @@
 import React from 'react'
-import Bar from '../components/Bar'
 import Tag from '../components/Tag'
 
 const Info = props => (
@@ -7,51 +6,47 @@ const Info = props => (
         <div className="card">
             <div className="card-content">
                 <div className="media">
-                    <div className="media-left">
+                    <div className="media-left" style={{width:'640px', height:'480px'}}>
                         <figure className="image is-70x70">
-                            <img src={ props.data.sprites.front_default } alt={ props.data.name } />
+                            <img class="w-100" src={ props.data.image } alt={ props.data.model } />
                         </figure>
                     </div>
                     <div className="media-content" style={{ alignSelf:'center' }}>
-                        <p className="title is-4">{ props.name }</p>
+                        <p className="title is-4">{ props.data.make }</p>
                         <div className="columns is-multiline">
                             <div className="column is-6">
-                                <Bar 
-                                    title="Weight"
-                                    color="green"
-                                    width={ props.data.weight }
-                                />
-                                
-                            </div>
-                            
-                            <div className="column is-6">
-                                <Bar 
-                                    title="Experience"
-                                    color="blue"
-                                    width={ props.data.base_experience }
-                                />
-                            </div>
-
-                            <div className="column is-6">
-                                <Bar 
-                                    title="Height"
-                                    color="aqua"
-                                    width={ props.data.height }
-                                />
-                            </div>
-
-                            <div className="column is-6">
                                 <span>
-                                    <b>Some Moves: </b>
+                                    <b>Model: </b>
                                     <div className="columns is-multiline is-mobile">
-                                        { props.data.moves.slice(0, 4).map((data) => (
-                                            <div key={ data.move.name } className="column is-3-desktop is-6-mobile">
-                                                <div className="tags">
-                                                    <Tag move={ data.move.name }/>
-                                                </div>
+                                        <div key={ props.data.model } className="column is-3-desktop is-6-mobile">
+                                            <div className="tags">
+                                                <Tag move={ props.data.model }/>
                                             </div>
-                                        ))}
+                                        </div>
                                     </div>
+                                    { props.data.main ? 
+                                        <div>
+                                            <div className="columns is-multiline is-mobile">
+                                                <div key={ props.data.main } className="column is-5-desktop is-6-mobile">
+                                                    <div className="tags">
+                                                        <Tag move="En mantenimiento" />
+                                                    </div>
+                                                </div>
+                                            </div> 
+
+                                            <div className="columns is-multiline is-mobile">
+                                                <div class="column">
+                                                  <button onClick={ e => props.click(0) } class="button">Marcar como entregago</button>  
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        : 
+                                        <div className="columns is-multiline is-mobile">
+                                            <div class="column">
+                                                <button onClick={ e => props.click(1) } class="button">Marcar como "En mantenimiento"</button>  
+                                            </div>
+                                        </div> 
+                                    }
                                 </span>
                             </div>
                         </div>

@@ -16,16 +16,17 @@ export default class Lista extends Component {
     }
 
     componentDidMount() {
-        fetch('https://pokeapi.co/api/v2/pokemon')
+        fetch('http://localhost:4000/api/cars')
         .then(results => {
             return results.json()
         }).then(data => {
-            let cards = data.results.map((info) => {
+            let cards = data.rows.map((info) => {
                 return(
                     <Card 
-                        name={ this.capitalizeFirst(info.name) }
-                        param={ info.name }
-                        url={ info.url }
+                        name={ this.capitalizeFirst(info.model) }
+                        param={ info.id }
+                        url={ info.image }
+                        isMaint={ info.main }
                     />
                 )
             })
@@ -41,7 +42,7 @@ export default class Lista extends Component {
     render() {
         return(
             <div className="container">
-                <Hero title="Poke API"/>
+                <Hero title="Cars API"/>
                 <div className="columns is-multiline" style={{ margin:'auto' }}>
                     { this.state.cards }
                 </div>

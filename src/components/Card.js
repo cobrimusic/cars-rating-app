@@ -1,4 +1,5 @@
 import React from 'react'
+import Tag from '../components/Tag'
 
 const Card = props => (
     <div className="column is-4">
@@ -11,8 +12,11 @@ const Card = props => (
                 </div>
 
                 <div className="content">
-                    Ver más acerca de <a href={'pokemon/' + props.param}>@{ props.name }</a>.
+                    Ver más acerca de <a href={'cars/' + props.param}>@{ props.name }</a>.
                     <br />
+                    {(
+                        props.isMaint ? <Tag move="En mantenimiento" /> : <div></div>
+                    )}
                 </div>
             </div>
         </div>

@@ -15,7 +15,7 @@ ReactDOM.render(<Router>
     <Switch>
         <Route exact path="/" component={Lista}/>
         <Route exact path="/lista" component={Lista}/>
-        <Route exact path="/pokemon/:name" component={Detalles}/>
+        <Route exact path="/cars/:id" component={Detalles}/>
         <Route component={ NotFound } />
     </Switch>
 </Router>, 

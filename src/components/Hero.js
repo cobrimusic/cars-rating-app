@@ -9,7 +9,7 @@ const Hero = props => (
                     { props.title }
                 </h1>
                 <h2 className="subtitle">
-                    Consulta la información de tus Pokemones favoritos
+                    Consulta la información de tus carros favoritos
                 </h2>
                 { props.redirect == 'true' && (
                     <Link to='/lista'><a className="back-link info-padding" href="javascript:void(0)">Ir a la lista...</a></Link>
